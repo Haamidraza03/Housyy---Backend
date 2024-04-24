@@ -29,6 +29,14 @@ app.use(express.json());
 
 app.use(cookieParser());
 
+app.get("/", async (req, res) => {
+    try {
+        res.status(200).json({msg:"Welcome to Housyy!!"})
+    } catch (error) {
+        res.status(500).json({msg:"Error Occured"});
+    }
+});
+
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
