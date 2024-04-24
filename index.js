@@ -30,9 +30,9 @@ app.use(express.json());
 app.use(cookieParser());
 
 
-app.use("/api/user", userRoutes);
-app.use("/api/auth", authRoutes);
-app.use("/api/sp", spRoutes);
+app.use("/user", userRoutes);
+app.use("/auth", authRoutes);
+app.use("/sp", spRoutes);
 
 app.get("/", async (req, res) => {
     try {
