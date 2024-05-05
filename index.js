@@ -6,8 +6,8 @@ import authRoutes from './routes/auth.route.js';
 import spRoutes from './routes/sp.route.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-import path from "path";
-import { fileURLToPath } from 'url';
+// import path from "path";
+// import { fileURLToPath } from 'url';
 
 dotenv.config();
 
