@@ -15,7 +15,11 @@ dotenv.config();
 // const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "https://housyy.vercel.app", // adjust to your Vercel domain
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  }));
 
 mongoose.connect(process.env.MONGO).then(() => {
     console.log('Connected to MongoDB');
